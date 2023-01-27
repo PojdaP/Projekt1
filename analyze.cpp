@@ -136,9 +136,9 @@ void choose_boardgame( vector<BoardGame>& games, int time, int age, double weigh
         {
           ofstream file_out;
           file_out.open( "results.txt", ios::out);
-          for( int i = 0; i < running; i++ )
+          for( int i = 1; i <= running; i++ )
           {
-            file_out << filtered_games[running - 1] << endl;
+            file_out << filtered_games[running - i] << endl;
           }
           file_out.close();
           cout << "Your options were stored" << endl << endl;

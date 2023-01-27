@@ -75,8 +75,8 @@ int main()
     cout << "Click the right button to get the results you want to see: " << endl<<endl;
     cout << "1 - Percentage of board games with a certain age restriction" << endl;
     cout << "2 - Most optimal number of players" << endl;
-    cout << "3 - Top 10 games with highest ranking in year 2017" << endl;
-    cout << "4 - Top 10 games with highest ranking in year 2018" << endl;
+    cout << "3 - Top 10 games with highest ratings in year 2017" << endl;
+    cout << "4 - Top 10 games with highest ratings in year 2018" << endl;
     cout << "5 - Average and median playtime for hundred games in years 2017 and 2018 with highest ratings" << endl;
     cout << "6 - Find a game for yourself" << endl;
 

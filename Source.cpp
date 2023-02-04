@@ -9,24 +9,6 @@
 
 using namespace std;
 
-void clear_data( vector<vector<string>> &data )//clearing input data when stored in vector<BoardGame>
-{
-  for( int i = 0; i < data.size(); i++ )
-  {
-    data[i].clear();
-  }
-  data.clear();
-}
-
-void createboardgames( vector<BoardGame>& data, const vector< vector<string> > &data_input ) //moving data from vector<vector<string>> to vector<BoardGame>
-{
-  for( int i = 0; i < data_input.size(); i++ )
-  {
-    if(((data_input[i][6])[0] != '0') && (data_input[i][14] )[0] != '0') data.push_back(BoardGame(data_input[i]));//adding new boardgame as long as it does not have value 0 for age and/or playtime
-  }
-}
-
-
 bool check_string( string str )//checking if input string is a number value
 {
   for( int i = 0; i < str.length(); i++ )
@@ -37,35 +19,31 @@ bool check_string( string str )//checking if input string is a number value
   return true;
 }
 
-int main()
+int main( )
 {
-  ifstream file2017;
-  ifstream file2018;
   ifstream file_merged;
+  ifstream file2018;
+  ifstream file2017;
 
-  file2017.open( "bgg_db_2017_04.csv", ios::in );//opening input files
+  file_merged.open("bgg_db.txt", ios::in);
+  file2017.open( "bgg_db_2017_04.csv", ios::in );
   file2018.open( "bgg_db_2018_01.txt", ios::in );
-  file_merged.open( "bgg_db.txt" , ios::in );
 
-  vector< vector<string> > data2017;//declaration of data for input from files
-  vector< vector<string> > data2018;
-  vector< vector<string> > merged_data;
-
-  readtxt( file2018, data2018 );//reading data and storing into vector<vector<string>>
-  readcsv( file2017, data2017 );
-  readtxt( file_merged, merged_data );
+  InputCsv data2017( file2017 );
+  InputTxt data2018( file2018 );
+  InputTxt merged_data( file_merged );
 
   vector<BoardGame> boardgames_2017;//declaration of target data storage
   vector<BoardGame> boardgames_2018;
   vector<BoardGame> boardgames;
   
   createboardgames( boardgames_2017, data2017 );//moving data from  vector< vector<string> > to vector<BoardGames>
-  createboardgames( boardgames_2018, data2018 );
+  createboardgames( boardgames_2018, data2018);
   createboardgames( boardgames, merged_data );
 
-  clear_data( data2017 );//clearing used data
-  clear_data( data2018 );
-  clear_data( merged_data );
+  data2018.~InputTxt();//clearing input data when stored in vector<BoardGame>
+  data2017.~InputCsv();
+  merged_data.~InputTxt();
   
   cout << "This program analyse data on BoardGames in years 2017 and 2018. " << endl;
   char input;//declaring input char for options

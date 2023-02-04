@@ -21,9 +21,6 @@
     <ClCompile Include="Boardgame.cpp">
       <Filter>BoardGame</Filter>
     </ClCompile>
-    <ClCompile Include="readdata.cpp">
-      <Filter>BoardGame</Filter>
-    </ClCompile>
     <ClCompile Include="analyze.cpp">
       <Filter>BoardGame</Filter>
     </ClCompile>

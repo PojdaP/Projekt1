@@ -1,6 +1,8 @@
 #pragma once
 #include "BoardGame.h"
+#include "readdata.h"
 
+void createboardgames( vector<BoardGame>& target, const Input& data_input );
 void analyse_players_age( vector<BoardGame>& games );
 void top10( vector<BoardGame> games );
 void analyse_players_number( vector<BoardGame>& games );

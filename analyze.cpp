@@ -9,6 +9,14 @@
 
 using namespace std;
 
+void createboardgames( vector<BoardGame>& target, const Input& data_input ) //moving data from vector<vector<string>> to vector<BoardGame>
+{
+  for( int i = 0; i < data_input.data.size(); i++ )
+  {
+    if( ( ( data_input.data[i][6] )[0] != '0' ) && ( data_input.data[i][14] )[0] != '0' ) target.push_back( BoardGame( data_input.data[i] ) );//adding new boardgame as long as it does not have value 0 for age and/or playtime
+  }
+}
+
 void sortbyplaytime( vector<BoardGame>& game )
 {
   sort( game.begin(), game.end(), []( BoardGame g1, BoardGame g2 ) { return g1.getTime() < g2.getTime(); } );//sorting by time growingly

@@ -1,6 +1,6 @@
-Name: Founding Fathers | Playtime: 180 | Age: 12 | Min players 3 | Max players 3 | Average rating: 8.06915 | Weight: 2.7273
+Name: Dixit: Journey | Playtime: 30 | Age: 8 | Min players 3 | Max players 3 | Average rating: 7.49218 | Weight: 1.3167
 
-Name: 1844: Switzerland | Playtime: 300 | Age: 12 | Min players 3 | Max players 3 | Average rating: 8.3711 | Weight: 4.3889
+Name: Dixit Odyssey | Playtime: 30 | Age: 8 | Min players 3 | Max players 3 | Average rating: 7.52943 | Weight: 1.2506
 
-Name: 1822: The Railways of Great Britain | Playtime: 420 | Age: 12 | Min players 3 | Max players 3 | Average rating: 8.41381 | Weight: 4.3333
+Name: One Night Ultimate Werewolf Daybreak | Playtime: 10 | Age: 8 | Min players 3 | Max players 3 | Average rating: 7.56417 | Weight: 1.4478
 

@@ -35,5 +35,4 @@ public:
   double getRating();
   double getWeight();
   friend ostream& operator<<( ostream& os, const BoardGame& x );
-  bool operator==( const BoardGame& b );
 };

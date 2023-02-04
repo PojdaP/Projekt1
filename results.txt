@@ -1,8 +1,6 @@
-Name: Pandemic Legacy: Season 1 | Playtime: 60 | Age: 13 | Min players 2 | Max players 2 | Average rating: 8.66905 | Weight: 2.8076
+Name: Founding Fathers | Playtime: 180 | Age: 12 | Min players 3 | Max players 3 | Average rating: 8.06915 | Weight: 2.7273
 
-Name: Through the Ages: A New Story of Civilization | Playtime: 240 | Age: 14 | Min players 2 | Max players 2 | Average rating: 8.72977 | Weight: 4.3093
+Name: 1844: Switzerland | Playtime: 300 | Age: 12 | Min players 3 | Max players 3 | Average rating: 8.3711 | Weight: 4.3889
 
-Name: Last Blitzkrieg | Playtime: 960 | Age: 13 | Min players 2 | Max players 2 | Average rating: 8.82278 | Weight: 3.6667
-
-Name: Last Chance for Victory | Playtime: 60 | Age: 15 | Min players 2 | Max players 2 | Average rating: 8.859 | Weight: 4
+Name: 1822: The Railways of Great Britain | Playtime: 420 | Age: 12 | Min players 3 | Max players 3 | Average rating: 8.41381 | Weight: 4.3333
 

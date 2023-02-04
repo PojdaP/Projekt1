@@ -143,7 +143,7 @@ int main()
       while( weight_type != 'n' && weight_type != 'y' ) { cout << "Please input correct character" << endl;  cin >> weight_type; }//input weight_type as long as it has desirable value
       switch( weight_type )
       {
-      case 'y': weight = 1.5;
+      case 'y': weight = 1.5; break;
       default: weight = 10;
       }
       cout << "Choose the year of the rating" << endl << "7 - 2017, 8 - 2018" << endl;
@@ -151,8 +151,9 @@ int main()
       while( year != '7' && year != '8' ) { cout << "Please input correct number" << endl; cin >> year; }//input year as long as it has desirable value
       switch(year)
         {
-          case '7': choose_boardgame( boardgames_2017, stoi( time ), stoi( age ), weight, stoi( players ) );
-          case '8': choose_boardgame( boardgames_2018, stoi( time ), stoi( age ), weight, stoi( players ) );
+      case '7': choose_boardgame( boardgames_2017, stoi( time ), stoi( age ), weight, stoi( players ) ); break;
+      case '8': choose_boardgame( boardgames_2018, stoi( time ), stoi( age ), weight, stoi( players ) ); break;
+      default: return 0;
         }
     
       cout << "Would you like to continue? : y - yes, n - no" << endl;

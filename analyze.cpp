@@ -14,11 +14,6 @@ void sortbyplaytime( vector<BoardGame>& game )
   sort( game.begin(), game.end(), []( BoardGame g1, BoardGame g2 ) { return g1.getTime() < g2.getTime(); } );//sorting by time growingly
 }
 
-void sortbymaxplayers( vector<BoardGame>& game )
-{
-  sort( game.begin(), game.end(), []( BoardGame g1, BoardGame g2 ) { return g1.getMax() < g2.getMax(); } );//sorting by max players number growingly
-}
-
 void sortbyavgrating( vector<BoardGame>& game )
 {
   sort( game.begin(), game.end(), []( BoardGame g1, BoardGame g2 ) { return g1.getRating() > g2.getRating(); } );//sorting by rating in descending order
@@ -65,8 +60,7 @@ void top10( vector<BoardGame> games )
 
 void analyse_players_number( vector<BoardGame>& games )
 {
-  sortbymaxplayers( games );
-  int max = games[games.size() - 1].getMax();
+  int max = ( *max_element( games.begin(), games.end(), []( BoardGame g1, BoardGame g2 ) { return g1.getMax() < g2.getMax(); } ) ).getMax();
   int* table = new int[max + 1]{};
 
   for( vector<BoardGame>::iterator ptr = games.begin(); ptr != games.end(); ptr++ )
@@ -86,8 +80,8 @@ void avg_med_playtime( vector<BoardGame>& games1, vector<BoardGame>& games2 )
 {
   sortbyavgrating( games1 );
   sortbyavgrating( games2 );
-  vector<BoardGame> sub1( &games1[0], &games1[9] );
-  vector<BoardGame> sub2( &games2[0], &games2[9] );
+  vector<BoardGame> sub1( &games1[0], &games1[99] );
+  vector<BoardGame> sub2( &games2[0], &games2[99] );
   int total_playtime1 = accumulate( sub1.begin(), sub1.end(), 0,
     []( int total, BoardGame& g1 ) {
       return total + g1.getTime();
@@ -99,10 +93,10 @@ void avg_med_playtime( vector<BoardGame>& games1, vector<BoardGame>& games2 )
   sortbyplaytime( sub1 );
   sortbyplaytime( sub2 );
 
-  cout << "Average playtime for hundred games in year 2017 with highest ratings: " << ( double )total_playtime1 / 10 << endl;
-  cout << "Median playtime for hundred games in year 2017 with highest ratings: " << sub1[5].getTime() << endl;
-  cout << "Average playtime for hundred games in year 2018 with highest ratings: " << ( double )total_playtime2 / 10 << endl;
-  cout << "Median playtime for hundred games in year 2018 with highest ratings: " << sub2[5].getTime() << endl;
+  cout << "Average playtime for hundred games in year 2017 with highest ratings: " << ( double )total_playtime1/100 << endl;
+  cout << "Median playtime for hundred games in year 2017 with highest ratings: " << sub1[50].getTime() << endl;
+  cout << "Average playtime for hundred games in year 2018 with highest ratings: " << ( double )total_playtime2/100 << endl;
+  cout << "Median playtime for hundred games in year 2018 with highest ratings: " << sub2[50].getTime() << endl;
 
 }
 
@@ -118,7 +112,7 @@ void choose_boardgame( vector<BoardGame>& games, int time, int age, double weigh
     } );
   sortbyavgrating( filtered_games );
 
-  cout << "Board games that meets your critiria: " << endl;
+  cout << "Board games that meet your critiria: " << endl;
   while( running )
   {
     if( filtered_games.size() >= running )

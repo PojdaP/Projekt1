@@ -15,14 +15,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp">
-      <Filter>BoardGame</Filter>
-    </ClCompile>
     <ClCompile Include="Boardgame.cpp">
       <Filter>BoardGame</Filter>
     </ClCompile>
     <ClCompile Include="analyze.cpp">
       <Filter>BoardGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
